@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BelajarYok.View.List"
+             xmlns:viewmodel="clr-namespace:BelajarYok.ViewModel"
+             x:DataType="viewmodel:ListViewModel"
+             xmlns:Models="clr-namespace:BelajarYok.Model"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             Background="black">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Grid BackgroundColor="#131517">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Source="Branding.png" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="1"/>
+                <Button Grid.Column="2" Grid.Row="0" Text="Login" TextColor="White" BackgroundColor="#bcfe2f" Margin="10,10,10,10"/>
+            </Grid>
+            <ScrollView>
+                <StackLayout BackgroundColor="Transparent">
+                    <Label Text="FILES" TextColor="White" FontSize="Large"/>
+                    <Label Text="To-Do List"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           TextColor="white"
+                           HorizontalOptions="CenterAndExpand"/>
+                    <BoxView BackgroundColor="#bcfe2f"
+                             HorizontalOptions="Center"
+                             HeightRequest="3"
+                             WidthRequest="250"/>
+                    <CollectionView BackgroundColor="Transparent" HeightRequest="210" ItemsSource="{Binding toDoView}"
+                                    Margin="20">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="{x:Type Models:ToDoListHeader}">
+                                <StackLayout>
+                                    <Label Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                                    <CollectionView ItemsSource="{Binding ToDoLists}">
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate x:DataType="{x:Type Models:ToDoList}">
+                                                <input:CheckBox Text="{Binding Text}"
+                                                                TextColor="White"
+                                                                BackgroundColor="{Binding backgroundColor}"
+                                                                IsChecked="{Binding isDone}"
+                                                                BoxBackgroundColor="Transparent"
+                                                                Color="#bcfe2f"
+                                                                IconColor="#bcfe2f"
+                                                                BorderColor="white"/>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <Label Text="Tasks"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           TextColor="white"
+                           HorizontalOptions="CenterAndExpand"/>
+                    <BoxView BackgroundColor="#bcfe2f"
+                             HorizontalOptions="Center"
+                             HeightRequest="3"
+                             WidthRequest="250"/>
+                    <CollectionView>
+                        
+                    </CollectionView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

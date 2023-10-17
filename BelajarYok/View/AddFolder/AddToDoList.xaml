@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:BelajarYok.ViewModel" 
+             x:DataType="viewmodel:AddToDoListViewModel"
+             x:Class="BelajarYok.View.AddFolder.AddToDoList"
+             xmlns:Models="clr-namespace:BelajarYok.Model"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             Background="Black">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Transparent" Spacing="10">
+                <StackLayout BackgroundColor="Transparent" Orientation="Horizontal">
+                    <Label Text="To Do List"
+                           TextColor="White"
+                           Margin="20,20,10,10"
+                           FontAttributes="Bold"
+                           FontSize="Title"
+                           HorizontalOptions="Start"/>
+                    <Frame HeightRequest="8"
+                           WidthRequest="8"
+                           Margin="10,10,20,10"
+                           HorizontalOptions="EndAndExpand"
+                           CornerRadius="100"></Frame>
+                </StackLayout>
+                <!--TITLE-->
+                <StackLayout Orientation="Horizontal"> 
+                    <Frame HorizontalOptions="Start"
+                           Margin="20,0,0,0"
+                           BackgroundColor="#2b2c30"
+                           CornerRadius="10">
+                        <Label Text="ikon | v" TextColor="White"/>
+                    </Frame>
+                    <Frame HorizontalOptions="EndAndExpand"
+                           Margin="10,0,20,0"
+                           BackgroundColor="#2b2c30"
+                           CornerRadius="10"
+                           WidthRequest="220">
+                        <Entry Placeholder="Enter Title Here"
+                           PlaceholderColor="DarkGray"
+                           TextColor="white"
+                           BackgroundColor="Transparent"
+                           Text="{Binding Title}"/>
+                    </Frame>
+                </StackLayout>
+                <!--tanggal-->
+                <StackLayout Margin="0,8,0,0" Orientation="Horizontal">
+                    <Frame HorizontalOptions="StartAndExpand"
+                           Margin="20,0,0,0"
+                           BackgroundColor="#2b2c30"
+                           CornerRadius="10">
+                        <Label Text="Bulan Tahun ------- ------- --- | v" TextColor="White"/>
+                    </Frame>
+                    <Frame HorizontalOptions="EndAndExpand"
+                           Margin="10,0,20,0"
+                           BackgroundColor="#2b2c30"
+                           CornerRadius="10"
+                           >
+                        <Label Text="DD | v"
+                               TextColor="White"/>
+
+                    </Frame>
+                </StackLayout>
+                <ScrollView>
+                    <StackLayout Padding="10">
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Transparent">
+                            <Entry Placeholder="Enter Text" Text="{Binding ToDoText}"
+                                   BackgroundColor="Transparent"
+                                   TextColor="White"
+                                   HorizontalOptions="StartAndExpand"
+                                   Margin="20,0,0,0"
+                                   PlaceholderColor="DarkGray"/>
+                            <Button Text="+"
+                                    TextColor="White"
+                                    FontSize="Large"
+                                    Command="{Binding addToDos}"
+                                    BackgroundColor="Transparent"
+                                    BorderColor="white"
+                                    HorizontalOptions="End"
+                                    WidthRequest="40"/>
+                        </StackLayout>
+                        <CollectionView ItemsSource="{Binding toDoView}"
+                                        HeightRequest="170">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="{x:Type Models:ToDoList}">
+                                    <StackLayout Orientation="Horizontal"
+                                                 Margin="20,0,0,0" >
+                                        <Label Text="{Binding Text}"
+                                               TextColor="{Binding textColor}"
+                                               FontSize="Medium"
+                                               FontAttributes="Bold"
+                                               Margin="23,0,0,2"
+                                               BackgroundColor="{Binding backgroundColor}"/>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        <StackLayout Spacing="2">
+                            <Label Text="Background Color" TextColor="White"
+                                   FontSize="Large" FontAttributes="Bold"
+                                   Margin="10,0,0,20"/>
+                            <input:SelectionView SelectionType="Button"
+                                             ItemsSource="{Binding Colors}"
+                                             SelectedItem="{Binding SelectedBGColor}"
+                                             Color="#BCFE2F"
+                                             BackgroundColor="#2b2c30"
+                                             />
+                            <Label Text="Text Color" TextColor="White"
+                                   FontSize="Large" FontAttributes="Bold"
+                                   Margin="10,0,0,20"/>
+                            <input:SelectionView SelectionType="Button"
+                                             ItemsSource="{Binding Colors1}"
+                                             SelectedItem="{Binding SelectedTextColor}"
+                                             Color="#BCFE2F"
+                                             BackgroundColor="#2b2c30"
+                                             />
+                        </StackLayout>
+                        <Button Text="Save"
+                                BackgroundColor="#BCFE2F"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                CornerRadius="20"
+                                HorizontalOptions="End"
+                                Command="{Binding saveAll}"/>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

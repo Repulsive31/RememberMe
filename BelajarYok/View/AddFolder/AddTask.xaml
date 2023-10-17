@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BelajarYok.View.AddFolder.AddTask"
+             Background="black">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="Transparent"
+                   CornerRadius="5"
+                   Padding="10"
+                   HeightRequest="30"
+                   Margin="10,0,10,15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="1" Source="Ellipse7.png" HorizontalOptions="End"/>
+                        <Label Grid.Column="0" 
+                           Text="Tasks"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="End"/>
+                    </Grid>
+                </Frame>
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="#2b2c30" WidthRequest="270"
+                   CornerRadius="5"
+                   Padding="10"
+                   Margin="20,0,0,0">
+                        <Grid>
+                            <Label Text="Month / Year"
+                           FontSize="16"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+
+                            <Button Text="V"
+                                    BackgroundColor="Transparent"
+                                    WidthRequest="20"
+                                    HeightRequest="20"
+                                    FontSize="16"
+                                    CharacterSpacing="0.15"
+                                    TextColor="White"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                    <Frame BackgroundColor="#2b2c30" WidthRequest="50"
+                   CornerRadius="5"
+                   Padding="10"
+                   Margin="20,0,20,0">
+                        <Grid>
+                            <Label Text="Days"
+                           FontSize="16"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Center" 
+                             Margin="0,15,0,0">
+                    <Frame BackgroundColor="#2b2c30"
+                   CornerRadius="5"
+                   Padding="10"
+                   Margin="20,0,0,0">
+                        <Grid>
+                            <Label Text="MM"
+                           FontSize="16"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                    <Label Text=":" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"
+                           TextColor="White"
+                           Margin="20,0,0,0"/>
+                    <Frame BackgroundColor="#2b2c30"
+                   CornerRadius="5"
+                   Padding="10"
+                   Margin="20,0,20,0">
+                        <Grid>
+                            <Label Text="SS"
+                           FontSize="16"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+                <BoxView BackgroundColor="#bcfe2f"
+                         Margin="60,25,60,0"
+                         HeightRequest="2"/>
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <Frame BackgroundColor="#2b2c30" WidthRequest="270"
+                   CornerRadius="5"
+                   Padding="10"
+                   Margin="20,0,0,0">
+                        <Grid>
+                            <Label Text="Month / Year"
+                           FontSize="16"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+
+                            <Button Text="V"
+                                    BackgroundColor="Transparent"
+                                    WidthRequest="20"
+                                    HeightRequest="20"
+                                    FontSize="16"
+                                    CharacterSpacing="0.15"
+                                    TextColor="White"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                    <Frame BackgroundColor="#2b2c30" WidthRequest="50"
+                   CornerRadius="5"
+                   Padding="10"
+                   Margin="20,0,20,0">
+                        <Grid>
+                            <Label Text="Days"
+                           FontSize="16"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Center" 
+                             Margin="0,15,0,0">
+                    <Frame BackgroundColor="#2b2c30"
+                   CornerRadius="5"
+                   Padding="10"
+                   Margin="20,0,0,0">
+                        <Grid>
+                            <Label Text="MM"
+                           FontSize="16"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                    <Label Text=":" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"
+                           TextColor="White"
+                           Margin="20,0,0,0"/>
+                    <Frame BackgroundColor="#2b2c30"
+                   CornerRadius="5"
+                   Padding="10"
+                   Margin="20,0,20,0">
+                        <Grid>
+                            <Label Text="SS"
+                           FontSize="16"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Center" 
+                             Margin="0,15,0,5">
+                    <Frame BackgroundColor="#2b2c30"
+                           CornerRadius="2"
+                           Padding="10"
+                           Margin="20,0,0,0"
+                           WidthRequest="320">
+                        <Entry Placeholder="Write the title"
+                               PlaceholderColor="#D8D8D8"
+                               FontSize="12"
+                               HeightRequest="40"/>
+                    </Frame>
+                    <Image Source="add.png" Margin="10,0,10,0"/>
+                </StackLayout>
+                <Frame BackgroundColor="#2b2c30"
+                           CornerRadius="2"
+                           Padding="10"
+                           Margin="20,0,20,0"
+                           WidthRequest="320"
+                           HeightRequest="200">
+                    <Entry Placeholder="Description"
+                           PlaceholderColor="#D8D8D8"
+                           FontSize="12"
+                           VerticalOptions="Start"/>
+                </Frame>
+                <BoxView BackgroundColor="#bcfe2f"
+                         Margin="60,10,60,0"
+                         HeightRequest="5"/>
+                <Label Text="Text Color"
+                       TextColor="White"
+                       FontSize="17"
+                       Margin="20,10,0,10"/>
+
+                <BoxView BackgroundColor="#bcfe2f"
+                         Margin="60,10,60,0"
+                         HeightRequest="5"/>
+                <Label Text="Background Color"
+                       TextColor="White"
+                       FontSize="17"
+                       Margin="20,10,0,20"/>
+                <Button BackgroundColor="#bcfe2f"
+                        Text="Save"
+                        CornerRadius="15"
+                        Margin="300,20,40,20"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

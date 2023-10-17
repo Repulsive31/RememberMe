@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BelajarYok.View.Friends">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Transparent"
+                   CornerRadius="5"
+                   Padding="10"
+                   HeightRequest="30"
+                   Margin="10,5,10,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="group_add.png" HorizontalOptions="Start"/>
+                    <Label Grid.Column="1" 
+                           Text="Add Friends"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="End"
+                           Margin="10,0,0,0"/>
+                </Grid>
+            </Frame>
+            <Frame x:Name="addFrame"
+                   BackgroundColor="#2b2c30"
+                   Margin="20,0,20,0"
+                   CornerRadius="10"
+                   HasShadow="False">
+                <Grid Margin="0,-15,0,-15">
+                    <Image Source="search.png" 
+                           HorizontalOptions="Start"/>
+                    <Entry x:Name="searchEntry"
+                           Placeholder="Search by ID"
+                           FontSize="15"
+                           Opacity="1"
+                           TextColor="White"
+                           PlaceholderColor="#84838c"
+                           Margin="30,0,30,0"
+                           TextChanged="OnSearchEntryTextChanged"/>
+                    <ImageButton BackgroundColor="Transparent"
+                                 Source="group_add.png"
+                                 HorizontalOptions="End"
+                                 Clicked="OnAddImageButtonClicked"/>
+                </Grid>
+            </Frame>
+            <Frame x:Name="contentFrame"
+                   Margin="20,0,20,0"
+                   CornerRadius="10"
+                   HasShadow="False"
+                   BackgroundColor="Transparent"
+                   IsVisible="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0"
+                           Source="Ellipse8.png"
+                           Margin="0,50,0,10"/>
+                    <Label Grid.Row="1"
+                           Text="User 2"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+                    <Label x:Name="friendText"
+                           Grid.Row="2"
+                           Text="Belum di daftarkan sebagai teman"
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+                    <Button x:Name="addButton"
+                            Grid.Row="2"
+                            BackgroundColor="#bcfe2f"
+                            BorderColor="#bcfe2f"
+                            BorderWidth="1"
+                            Text="Add Friend"
+                            FontSize="17"
+                            TextTransform="None"
+                            TextColor="#131517"
+                            Margin="110,30,110,0"
+                            HeightRequest="50"
+                            Clicked="OnAddButtonClicked"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

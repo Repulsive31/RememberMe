@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BelajarYok.View.More.Profile">
+    <ContentPage.Content>
+        <StackLayout >
+            <Frame BackgroundColor="Transparent"
+                   CornerRadius="5"
+                   Padding="10"
+                   HeightRequest="30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <ImageButton Grid.Column="0" Source="Back.png" 
+                                 BackgroundColor="Transparent"
+                                 />
+                    <ImageButton Grid.Column="2" Source="VIP1.png"
+                                 BackgroundColor="Transparent"
+                                 Clicked="ShowPopUp"/>
+                    <Label Grid.Column="1" 
+                           Text="Profile"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="End"/>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="Transparent">
+                <Image Source="Ellipse8.png" Margin="0,-15,0,-15"/>
+            </Frame>
+            <Label Text="User 1"
+                   TextColor="White"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   />
+            <Label Text="uSeR_1id."
+                   TextColor="White"
+                   FontSize="12"
+                   HorizontalOptions="Center"
+                   />
+
+            <Frame BackgroundColor="Transparent"
+                   CornerRadius="5"
+                   Padding="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="20"
+                           FontSize="12"
+                           TextColor="#bcfe2f"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"/>
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="Followers"
+                           FontSize="12"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="2"
+                           Text="13"
+                           FontSize="12"
+                           TextColor="#bcfe2f"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="3"
+                           Text="Followers"
+                           FontSize="12"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+            <Button Grid.Row="0" 
+                    CornerRadius="15" 
+                    Margin="20,0,20,5" 
+                    HeightRequest="45"
+                    BackgroundColor="#2b2c30"
+                    Text="Manage theme                                                    >"
+                    TextColor="White"
+                    FontSize="15"
+                    CharacterSpacing="0.5"
+                    TextTransform="None"
+                    />
+            <Button Grid.Row="0" 
+                    CornerRadius="15" 
+                    Margin="20,0,20,5" 
+                    HeightRequest="45"
+                    BackgroundColor="#2b2c30"
+                    Text="Profile settings                                                    >"
+                    TextColor="White"
+                    FontSize="15"
+                    CharacterSpacing="0.5"
+                    TextTransform="None"
+                    />
+            <Button Grid.Row="0" 
+                    CornerRadius="15" 
+                    Margin="20,0,20,5" 
+                    HeightRequest="45"
+                    BackgroundColor="#c9a438"
+                    Text="GET VIP                                                                >"
+                    Clicked="ShowPopUp"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    FontSize="15"
+                    CharacterSpacing="0.5"
+                    TextTransform="None"
+                    />
+            <Button Grid.Row="0" 
+                    CornerRadius="15" 
+                    Margin="20,0,20,5" 
+                    HeightRequest="45"
+                    BackgroundColor="#2b2c30"
+                    Text="History                                                                  >"
+                    TextColor="White"
+                    FontSize="15"
+                    CharacterSpacing="0.5"
+                    TextTransform="None"
+                    />
+            <Button Grid.Row="0" 
+                    CornerRadius="15" 
+                    Margin="20,0,20,5" 
+                    HeightRequest="45"
+                    BackgroundColor="#2b2c30"
+                    Text="Application locker                                                >"
+                    TextColor="White"
+                    FontSize="15"
+                    CharacterSpacing="0.5"
+                    TextTransform="None"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

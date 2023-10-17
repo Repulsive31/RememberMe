@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BelajarYok.View.Settings">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowSpacing="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="42"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="65"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="230"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" Source="more_horiz" Aspect="AspectFit" WidthRequest="20" HeightRequest="20"/>
+                <Label Grid.Row="0" 
+                           Grid.Column="1"
+                           Text="More"
+                           FontAttributes="Bold"
+                           FontSize="21"
+                           TextColor="White"
+                           VerticalTextAlignment="Center"
+                           Grid.ColumnSpan="3" />
+                <ImageButton Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Source="More2"/>
+                <ImageButton Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Source="More3"/>
+                <ImageButton Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Source="More4"/>
+                <ImageButton Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Source="More5"/>
+                <ImageButton Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Source="More6"/>
+                <ImageButton Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Source="More7"/>
+                <ImageButton Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Source="More8"/>
+                <Button Grid.Row="9"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        BorderColor="#a7e12c"
+                        Text="Logout"
+                        BorderWidth="2"
+                        TextColor="#a7e12c"
+                        BackgroundColor="Transparent"
+                        CharacterSpacing="1"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

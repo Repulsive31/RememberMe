@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BelajarYok.View.Add">
+    <ContentPage.Content>
+        <StackLayout Margin="20,0,20,20" Spacing="45" VerticalOptions="Center" BackgroundColor="Black">
+            <Label Text="Choose Category"
+                   FontFamily="DM Sans"
+                   FontSize="40"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontAttributes="Bold"></Label>
+            <StackLayout Spacing="60" BackgroundColor="black">
+                <Button Text="To-Do List"
+                        TextColor="#2b2c30"
+                        FontAttributes="Bold"
+                        BackgroundColor="#BCFE2F"
+                        FontSize="Large"
+                        Clicked="Button_Clicked"
+                        CornerRadius="5"></Button>
+                <Button Text="Tasks"
+                        TextColor="#2b2c30"
+                        FontAttributes="Bold"
+                        BackgroundColor="#BCFE2F"
+                        FontSize="Large"
+                        Clicked="Button_Clicked_1"
+                        CornerRadius="5"></Button>
+                <Button Text="Concentration"
+                        FontFamily="DM Sans"
+                        TextColor="#2b2c30"
+                        FontAttributes="Bold"
+                        BackgroundColor="#BCFE2F"
+                        FontSize="Large"
+                        Clicked="Button_Clicked_2"
+                        CornerRadius="5"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

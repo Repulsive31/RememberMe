@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BelajarYok.View.AddFolder.Concentration"
+             Background="black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Transparent"
+                   CornerRadius="5"
+                   Padding="10"
+                   HeightRequest="30"
+                   Margin="10,0,10,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="1" Source="Ellipse7.png" HorizontalOptions="End"/>
+                    <Label Grid.Column="0" 
+                           Text="Concentration"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="End"
+                           />
+                </Grid>
+            </Frame>
+            <Frame 
+                   BackgroundColor="Transparent">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" 
+                           Text="Let's Concetrate"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           CharacterSpacing="0.15"
+                           TextColor="White"
+                           Margin="0,60,0,30"
+                           HorizontalOptions="Center" 
+                           />
+                    <Image Grid.Row="1"
+                           Source="Ellipse12.png" 
+                           HorizontalOptions="Center"/>
+                    <Label x:Name="timerLabel"
+                           Grid.Row="1"
+                           Text="00:00:00"
+                           TextColor="White"
+                           FontSize="24"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <Entry x:Name="timerEntry"
+                           Placeholder="Enter Time"
+                           PlaceholderColor="DarkGray"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="2" 
+                           Margin="80,0,80,0"/>
+                    <Button Grid.Row="4"
+                            x:Name="startButton"
+                            CornerRadius="20"
+                            Text="Start"
+                            FontAttributes="Bold"
+                            BorderWidth="2"
+                            TextColor="#2b2c30"
+                            BackgroundColor="#a7e12c"
+                            TextTransform="None"
+                            Margin="130,30,130,0"
+                            CharacterSpacing="1"
+                            Clicked="OnStartButtonClicked" />
+                </Grid>
+            </Frame>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
